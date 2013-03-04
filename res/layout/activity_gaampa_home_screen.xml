@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GaampaHomeScreen" >
+
+    <LinearLayout
+        android:id="@+id/entire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/search"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10.31"
+                android:text="@string/search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.43" >
+
+            <LinearLayout
+                android:id="@+id/contactsBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="255dp"
+                    android:layout_weight="0.34" >
+
+                    <TableLayout
+                        android:id="@+id/contacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TableRow
+                            android:id="@+id/tableRow2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/contact1"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </TableRow>
+                    </TableLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/edituser"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="36dp"
+                        android:layout_height="27dp"
+                        android:text="@string/button" />
+
+                    <Button
+                        android:id="@+id/deleteuser"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="36dp"
+                        android:layout_height="27dp"
+                        android:text="@string/button" />
+
+                    <Button
+                        android:id="@+id/adduser"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="36dp"
+                        android:layout_height="27dp"
+                        android:text="@string/button" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.87" >
+
+                    <TableLayout
+                        android:id="@+id/tagsAndDescriptions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*" >
+
+                        <TableRow
+                            android:id="@+id/tableRow3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/small"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/description"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </TableRow>
+                    </TableLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" >
+
+                    <Button
+                        android:id="@+id/editTag"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="@string/button" />
+
+                    <Button
+                        android:id="@+id/deleteTag"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="@string/button" />
+
+                    <Button
+                        android:id="@+id/addTag"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="@string/button" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:stretchColumns="*" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/importButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/import_" />
+
+                <Button
+                    android:id="@+id/exportButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/export_" />
+
+                <Button
+                    android:id="@+id/aboutButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</RelativeLayout>
